@@ -1,41 +1,39 @@
-import React from 'react';
-import {Link} from "react-router-dom"
+import React from "react";
+import { Link,NavLink } from "react-router-dom";
 
 const Sidebar = () => {
-    return (
-        <ul
-        id="menu"
-        class="menu p-4 overflow-y-auto w-60 bg-primary text-base-100 overflow-y-auto "
-      >
+  return (
+    <div class="drawer-side ">
+      <label for="my-drawer-2" class="drawer-overlay "></label>
+      <div className=" overflow-y-auto " id="menu">
+      <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
         {/* <!-- Sidebar content here --> */}
-        <Link
-          className="text-2xl font-semibold text-center mb-2 uppercase"
-          to="/"
-        >
-          Dashboard
-        </Link>{" "}
-        <hr />
-        <div className="collapse collapse-plus bg-info text-white rounded-lg mt-3">
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
           <input type="checkbox" className="peer" />
           <div className="collapse-title  font-bold">Settings</div>
           <div className="collapse-content  bg-base-300 text-black ">
-            <li>
-              <a>Sidebar Item 2</a>
+            <li className="mt-3">
+              <NavLink to="/allstudent">All Students</NavLink>
             </li>
-            <li>
-              <a>Sidebar Item 2</a>
+            <li className="mt-3">
+              <NavLink to="/studentdetails">Student Details</NavLink>
             </li>
-            <li>
-              <a>Sidebar Item 2</a>
+            <li className="mt-3">
+              <NavLink to="/admitionform">Admition Form</NavLink>
             </li>
-            <li>
-              <a>Sidebar Item 2</a>
-            </li>
+          
+          
           </div>
         </div>
        
+     
+        
+       
+      
       </ul>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Sidebar;
