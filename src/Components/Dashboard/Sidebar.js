@@ -10,7 +10,7 @@ const Sidebar = () => {
         {/* <!-- Sidebar content here --> */}
         <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
           <input type="checkbox" className="peer" />
-          <div className="collapse-title  font-bold">Settings</div>
+          <div className="collapse-title  font-bold">Student</div>
           <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
               <NavLink to="/allstudent">All Students</NavLink>
