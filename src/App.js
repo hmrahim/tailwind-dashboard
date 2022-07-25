@@ -11,6 +11,10 @@ import TeacherDetails from './Components/Pages/TeacherDetails';
 import AddTeacher from './Components/Pages/AddTeacher';
 import AllClass from './Components/Pages/AllClass';
 import AddClass from './Components/Pages/AddClass';
+import AllSubjects from './Components/Pages/AllSubject';
+import AddSubject from './Components/Pages/AddSubject';
+import AllShift from './Components/Pages/AllShift';
+import AddShift from './Components/Pages/AddShift';
 
 function App() {
   return (
@@ -26,6 +30,10 @@ function App() {
           <Route path='addteacher' element={<AddTeacher/>}/>
           <Route path='allclasses' element={<AllClass/>}/>
           <Route path='addclass' element={<AddClass/>}/>
+          <Route path='allsubjects' element={<AllSubjects/>}/>
+          <Route path='addsubject' element={<AddSubject/>}/>
+          <Route path='allshift' element={<AllShift/>}/>
+          <Route path='addshift' element={<AddShift/>}/>
         </Route>
       </Routes>
      
