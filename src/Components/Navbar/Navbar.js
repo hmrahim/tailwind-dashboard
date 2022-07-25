@@ -33,7 +33,7 @@ const Navbar = () => {
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <img src="https://placeimg.com/80/80/people" />
+          <img src="https://i.ibb.co/n6STs9M/IMG-20210117-164349-8-removebg-preview.png" />
         </div>
       </label>
       <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-primary rounded-box w-52">

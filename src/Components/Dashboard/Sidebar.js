@@ -1,5 +1,7 @@
 import React from "react";
 import { Link,NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee,faGraduationCap,faPenClip,faUserTie } from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => {
   return (
@@ -10,16 +12,48 @@ const Sidebar = () => {
         {/* <!-- Sidebar content here --> */}
         <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
           <input type="checkbox" className="peer" />
-          <div className="collapse-title  font-bold">Student</div>
+          <div className="collapse-title  font-bold"><span className="text-info text-2xl"><FontAwesomeIcon icon={faGraduationCap} /></span> Student</div>
           <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
-              <NavLink to="/allstudent">All Students</NavLink>
+              <NavLink to="/allstudent">   All Students</NavLink>
             </li>
             <li className="mt-3">
               <NavLink to="/studentdetails">Student Details</NavLink>
             </li>
             <li className="mt-3">
               <NavLink to="/admitionform">Admition Form</NavLink>
+            </li>
+          
+          
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" className="peer" />
+          <div className="collapse-title  font-bold"><span className="text-info text-2xl"><FontAwesomeIcon icon={faUserTie} /></span>  Teachers</div>
+          <div className="collapse-content  bg-base-300 text-black ">
+            <li className="mt-3">
+              <NavLink to="/allteachers">All Teachers</NavLink>
+            </li>
+            <li className="mt-3">
+              <NavLink to="/teacherdetails">Teacher Details</NavLink>
+            </li>
+            <li className="mt-3">
+              <NavLink to="/addteacher">Add Teacher </NavLink>
+            </li>
+          
+          
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
+          <input type="checkbox" className="peer" />
+          <div className="collapse-title  font-bold"><span className="text-info text-2xl"><FontAwesomeIcon icon={faPenClip} /></span>  Class</div>
+          <div className="collapse-content  bg-base-300 text-black ">
+            <li className="mt-3">
+              <NavLink to="/allclasses">All Classes</NavLink>
+            </li>
+            
+            <li className="mt-3">
+              <NavLink to="/addclass">Add Class </NavLink>
             </li>
           
           

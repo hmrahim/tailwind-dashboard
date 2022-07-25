@@ -3,6 +3,7 @@ import React from "react";
 const AdmitionForm = () => {
   return (
     <div className=" w-full md:w-11/12 shadow-md lg:w-11/12 mx-auto mt-5 px-4 bg-base-100 rounded">
+      <h1 className="text-2xl m-4">Admition Form</h1>
       <div className="p-4">
         <form action="" className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
           <div class="form-control w-full ">
@@ -150,7 +151,7 @@ const AdmitionForm = () => {
               class="input input-bordered w-full"
             />
           </div> 
-          <br />
+          
           <div>
             <button className="btn btn-primary">Submit</button>
             
