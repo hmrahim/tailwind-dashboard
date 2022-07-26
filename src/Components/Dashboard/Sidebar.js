@@ -17,9 +17,7 @@ const Sidebar = () => {
             <li className="mt-3">
               <NavLink to="/allstudent">   All Students</NavLink>
             </li>
-            <li className="mt-3">
-              <NavLink to="/studentdetails">Student Details</NavLink>
-            </li>
+            
             <li className="mt-3">
               <NavLink to="/admitionform">Admition Form</NavLink>
             </li>
@@ -33,9 +31,6 @@ const Sidebar = () => {
           <div className="collapse-content  bg-base-300 text-black ">
             <li className="mt-3">
               <NavLink to="/allteachers">All Teachers</NavLink>
-            </li>
-            <li className="mt-3">
-              <NavLink to="/teacherdetails">Teacher Details</NavLink>
             </li>
             <li className="mt-3">
               <NavLink to="/addteacher">Add Teacher </NavLink>

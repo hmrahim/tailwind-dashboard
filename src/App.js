@@ -15,6 +15,8 @@ import AllSubjects from './Components/Pages/AllSubject';
 import AddSubject from './Components/Pages/AddSubject';
 import AllShift from './Components/Pages/AllShift';
 import AddShift from './Components/Pages/AddShift';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -23,10 +25,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Dashboard/>}>
           <Route path='allstudent' element={<Allstudents/>}/>
-          <Route path='studentdetails' element={<StudentDetails/>}/>
+          <Route path='studentdetails/:id' element={<StudentDetails/>}/>
           <Route path='admitionform' element={<AdmitionForm/>}/>
           <Route path='allteachers' element={<AllTeachers/>}/>
-          <Route path='teacherdetails' element={<TeacherDetails/>}/>
+          <Route path='teacherdetails/:id' element={<TeacherDetails/>}/>
           <Route path='addteacher' element={<AddTeacher/>}/>
           <Route path='allclasses' element={<AllClass/>}/>
           <Route path='addclass' element={<AddClass/>}/>
@@ -37,7 +39,7 @@ function App() {
         </Route>
       </Routes>
      
-     
+     <ToastContainer/>
     </div>
   );
 }
