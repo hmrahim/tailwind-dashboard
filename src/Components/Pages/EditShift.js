@@ -1,13 +1,24 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useQuery } from 'react-query';
 import DatePicker from "react-datepicker";
 import { ToastContainer, toast } from 'react-toastify';
 
 
+
 import "react-datepicker/dist/react-datepicker.css";
+import { useNavigate, useParams } from 'react-router-dom';
 
 
-const AddShift = () => {
+const EditShift = () => {
+    const navigate = useNavigate()
+    const {id} = useParams()
+    const { isLoading, refetch, data } = useQuery(['editshift',id], () =>
+    fetch(`http://localhost:5000/shift/${id}`).then(res =>
+      res.json()
+    )
+  )
+  
   const {
     register,
     formState: { errors },
@@ -16,8 +27,8 @@ const AddShift = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/shift",{
-      method:"POST",
+    fetch(`http://localhost:5000/shift/${id}`,{
+      method:"PATCH",
       headers:{
         "Content-Type":"Application/json"
       },
@@ -25,13 +36,18 @@ const AddShift = () => {
     })
     .then(res=> res.json())
     .then(data=> {
-      toast.success("Shift added succesfully")
+      toast.success("Shift Updated succesfully")
       reset()
+      navigate("/allshift")
     })
   };
+  refetch()
+  if(isLoading){
+    return <h1 className="text-center text-2xl">Loading...</h1>
+  }
     return (
         <div className=" w-full md:w-3/6 shadow-md lg:w-3/6 mx-auto mt-5 px-4 bg-base-100 rounded">
-        <h1 className="text-2xl m-4">Add Shift</h1>
+        <h1 className="text-2xl m-4">Add Class</h1>
         <div className="p-4">
           <form onSubmit={handleSubmit(onSubmit)} action="" className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
           <div class="form-control w-full ">
@@ -39,8 +55,9 @@ const AddShift = () => {
               <span class="label-text">Name</span>
             </label>
             <input
+            
               type="text"
-              placeholder="Type here"
+              defaultValue={data.name}
               class="input input-bordered w-full"
               {...register("name", {
                 required: {
@@ -69,4 +86,4 @@ const AddShift = () => {
     );
 };
 
-export default AddShift;
+export default EditShift;

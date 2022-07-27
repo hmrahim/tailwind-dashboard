@@ -9,7 +9,9 @@ const AllTeachers = () => {
   )
 )
 
-  
+if(isLoading){
+  return <h1 className="text-center text-2xl">Loading...</h1>
+}
     return (
         <div className=" w-full md:w-11/12 shadow-md lg:w-11/12 mx-auto mt-5 px-4 bg-base-100 rounded">
         <h1 className="text-2xl m-4">All Teachers</h1>

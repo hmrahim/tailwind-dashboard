@@ -10,6 +10,7 @@ const Sidebar = () => {
       <div className=" overflow-y-auto " id="menu">
       <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 shadow-md min-h-[100vh] text-base-content">
         {/* <!-- Sidebar content here --> */}
+        <Link to="/" className="text-2xl font-semibold text-center select-none bg-primary text-base-100 rounded-lg py-3 cursor-pointer  ">  Dashboard</Link>
         <div className="collapse collapse-plus bg-primary text-white rounded-lg mt-3">
           <input type="checkbox" className="peer" />
           <div className="collapse-title  font-bold"><span className="text-info text-2xl"><FontAwesomeIcon icon={faGraduationCap} /></span> Student</div>
